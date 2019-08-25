@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="shop">
+    <Basepaths>/v1/shop</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1565863442773</CreatedAt>
+    <CreatedBy>chandrababu.k@gmail.com</CreatedBy>
+    <Description>Shop (v1)</Description>
+    <DisplayName>shop</DisplayName>
+    <LastModifiedAt>1565863600856</LastModifiedAt>
+    <LastModifiedBy>chandrababu.k@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:bf7113c518754b2e4300c997d28d7ab4efabc16c4b4a181731d78192369002e07583ed828ba212131e32395ef2d54baaf688a5d1808e1caa3b60148b2868c439</ManifestVersion>
+    <Policies>
+        <Policy>AssignMessage.ErrorContent.BadRequest</Policy>
+        <Policy>AssignMessage.ErrorContent.ResourceNotFound</Policy>
+        <Policy>AssignMessage.ErrorContent.ServerError</Policy>
+        <Policy>AssignMessage.ErrorType.BadRequest</Policy>
+        <Policy>AssignMessage.ErrorType.ResourceNotFound</Policy>
+        <Policy>AssignMessage.Movies</Policy>
+        <Policy>ExtractVariables.Movies</Policy>
+        <Policy>KeyValueMapOperations.Get.MoviesTarget.Basepath</Policy>
+        <Policy>LookupCache.MoviesTarget.Basepath</Policy>
+        <Policy>PopulateCache.MoviesTarget.Basepath</Policy>
+        <Policy>RaiseFault.GoToFaultRules</Policy>
+        <Policy>RaiseFault.Json</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>node://app.js</Resource>
+        <Resource>node://config.json</Resource>
+        <Resource>node://mock/error.json</Resource>
+        <Resource>node://mock/frozen.json</Resource>
+        <Resource>node://mock/titanic.json</Resource>
+        <Resource>node://package-lock.json</Resource>
+        <Resource>node://package.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>movies</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
